@@ -6,6 +6,9 @@ const routesUser = require('./routes/user.routes');
 const server = express();
 const db = require("./models");
 
+const cors = require('cors');
+server.use(cors());
+
 db.mongoose
 .connect(db.url,{
     useNewUrlParser: true,

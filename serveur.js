@@ -4,6 +4,7 @@ const routes = require('./routes/quest.routes');
 const routesProduct = require('./routes/product.routes');
 const routesUser = require('./routes/user.routes');
 const server = express();
+const port = 3000
 const db = require("./models");
 
 const cors = require('cors');
@@ -25,6 +26,6 @@ routes(server);
 routesProduct(server);
 routesUser(server);
 
-server.listen(3000, () =>{
-    console.log("Serveur demarré en écoute sur le porte 3050 !")
+server.listen(port, () =>{
+    console.log(`Serveur demarré en écoute sur le port ${port} !, l'adresse http://localhost:${port}`)
 });

@@ -4,7 +4,7 @@ const routes = require('./routes/quest.routes');
 const routesProduct = require('./routes/product.routes');
 const routesUser = require('./routes/user.routes');
 const server = express();
-const port = 3000
+const port = 3050;
 const db = require("./models");
 
 const cors = require('cors');

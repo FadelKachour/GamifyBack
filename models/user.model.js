@@ -12,11 +12,6 @@ const UserSchema = mongoose.Schema({
         unique: false,
         required: true
     },
-    admin: {
-        type: Boolean,
-        unique: false,
-        required: true
-    },
     credits: Number,
     admin: {
         type: Boolean,

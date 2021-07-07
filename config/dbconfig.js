@@ -1,3 +1,3 @@
 module.exports ={
-    url:"mongodb://gamifyback:smTJg5KFsVkUFYsi3I0TDZS52UtclNGbIUIY6WvoSbDYKKozMSSrAM8CRIRJsmQqlFHSmJKfAV4UNI68mTQ7fQ==@gamifyback.mongo.cosmos.azure.com:10255/?ssl=true&retrywrites=false&maxIdleTimeMS=120000&appName=@gamifyback@"
+    url:"mongodb+srv://toto:toto@cluster0.7liyv.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
 }

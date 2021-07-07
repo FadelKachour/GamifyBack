@@ -139,7 +139,9 @@ exports.update = (req, res) => {
         }
         User.findByIdAndUpdate(req.params.userId, {
             username: req.body.username ? req.body.username : user.username,
-            password: req.body.password ? req.body.password : user.password
+            password: req.body.password ? req.body.password : user.password,
+            credits: req.body.credits ? req.body.credits : user.credits,
+            admin: req.body.admin ? req.body.admin : user.admin
         }, {new: true})
         .then(user => {
             if(!user) {

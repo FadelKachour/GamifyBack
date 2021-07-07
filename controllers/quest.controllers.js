@@ -14,7 +14,7 @@ exports.create = (req, res) => {
         name: req.body.name,
         description: req.body.description,
         status: req.body.status,
-        credits: req.body.credits
+        credit: req.body.credit
 
     });
 

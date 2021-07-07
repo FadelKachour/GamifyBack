@@ -107,7 +107,9 @@ exports.findAll = (req, res) => {
 
 // Find a single User with a userId
 exports.findOne = (req, res) => {
-    User.findById(req.params.userId)
+    User
+    .findById(req.params.userId)
+    .populate('quests')
     .then(user => {
         if(!user) {
             return res.status(404).send({
@@ -141,7 +143,9 @@ exports.update = (req, res) => {
             username: req.body.username ? req.body.username : user.username,
             password: req.body.password ? req.body.password : user.password,
             credits: req.body.credits ? req.body.credits : user.credits,
-            admin: req.body.admin ? req.body.admin : user.admin
+            admin: req.body.admin ? req.body.admin : user.admin,
+            quests: req.body.quests ? req.body.quests : user.quests,
+            finishQuests: req.body.finishQuests ? req.body.finishQuests : user.finishQuests
         }, {new: true})
         .then(user => {
             if(!user) {
